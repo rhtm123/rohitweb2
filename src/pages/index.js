@@ -1,19 +1,18 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import Link from "next/link"
 
 export default function Home() {
+  
   return (
     <main>
 
 
 <div className="py-4 px-4 sm:px-6 lg:px-8">
   {/* <!-- Grid --> */}
-  <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
-    <div className="lg:col-span-3">
+  <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12 lg:items-center">
+    <div className="py-6">
       <h1 className="block text-3xl font-bold sm:text-4xl md:text-4xl lg:text-4xl ">Rohit Maurya (Developer & Teacher)</h1>
-      <p className="mt-3 text-lg">
+      <p className="my-3 text-lg">
       I am a passionate developer with a strong zeal to work with emerging startups. I love to work with the
               latest technologies and build modern and blazing fast websites.        
         </p>
@@ -21,9 +20,11 @@ export default function Home() {
       
       <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
         
-        <a className="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-          Request demo
-        </a>
+        <Link href={"/thoughts/"+"why-did-i-choose-to-become-an-educator-than-an-employee"}>
+          <button className="btn btn-primary">
+          Know More 
+          </button>
+        </Link>
       </div>
 
 
@@ -36,8 +37,8 @@ export default function Home() {
     
 
 
-    <div className="lg:col-span-4 mt-10 lg:mt-0">
-      <img className="w-full rounded-xl" src="https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80" alt="Image Description" />
+    <div className="my-10">
+      <img className="w-full rounded-xl" src="/images/hero1.jpg" alt="Rohit Maurya" />
     </div>
     {/* <!-- End Col --> */}
   </div>
@@ -58,7 +59,7 @@ export default function Home() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Card */}
       <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-        <div className="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
+        <div className="h-52 flex flex-col justify-center items-center bg-primary rounded-t-xl">
           <svg
             className="w-28 h-28"
             width={56}
@@ -68,7 +69,7 @@ export default function Home() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect width={56} height={56} rx={10} fill="white" />
-            <path
+            {/* <path
               d="M20.2819 26.7478C20.1304 26.5495 19.9068 26.4194 19.6599 26.386C19.4131 26.3527 19.1631 26.4188 18.9647 26.5698C18.848 26.6622 18.7538 26.78 18.6894 26.9144L10.6019 43.1439C10.4874 43.3739 10.4686 43.6401 10.5496 43.884C10.6307 44.1279 10.805 44.3295 11.0342 44.4446C11.1681 44.5126 11.3163 44.5478 11.4664 44.5473H22.7343C22.9148 44.5519 23.0927 44.5037 23.2462 44.4084C23.3998 44.3132 23.5223 44.1751 23.5988 44.011C26.0307 38.9724 24.5566 31.3118 20.2819 26.7478Z"
               fill="url(#paint0_linear_2204_541)"
             />
@@ -88,29 +89,28 @@ export default function Home() {
                 <stop stopColor="#0052CC" />
                 <stop offset="0.92" stopColor="#2684FF" />
               </linearGradient>
-            </defs>
-          </svg>
+            </defs> */}
+          </svg> 
         </div>
         <div className="p-4 md:p-6">
           <span className="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
             Online Courses
           </span>
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">
             Coding Chaska
           </h3>
           <p className="mt-3 text-gray-500">
-            A software that develops products for software developers and
-            developments.
+            Coding Chaska is a online learning platform where you can find interactive courses. 
           </p>
         </div>
         <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-          <a
+          <a target="_blank"
             className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://www.codingchaska.com/"
           >
-            View sample
+            Visit Site
           </a>
-          <a
+          <a 
             className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
             href="#"
           >
@@ -121,7 +121,7 @@ export default function Home() {
       {/* End Card */}
       {/* Card */}
       <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-        <div className="h-52 flex flex-col justify-center items-center bg-rose-500 rounded-t-xl">
+        <div className="h-52 flex flex-col justify-center items-center bg-secondary rounded-t-xl">
           <svg
             className="w-28 h-28"
             width={56}
@@ -131,7 +131,7 @@ export default function Home() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect width={56} height={56} rx={10} fill="white" />
-            <g clipPath="url(#clip0_2204_541)">
+            {/* <g clipPath="url(#clip0_2204_541)">
               <path
                 d="M37.0409 28.8697C33.1968 28.8697 30.0811 31.9854 30.0811 35.8288C30.0811 39.6726 33.1968 42.789 37.0409 42.789C40.8843 42.789 44 39.6726 44 35.8288C44 31.9854 40.8843 28.8697 37.0409 28.8697ZM18.9594 28.8701C15.116 28.8704 12 31.9854 12 35.8292C12 39.6726 15.116 42.7886 18.9594 42.7886C22.8032 42.7886 25.9192 39.6726 25.9192 35.8292C25.9192 31.9854 22.8032 28.8701 18.9591 28.8701H18.9594ZM34.9595 20.1704C34.9595 24.0138 31.8438 27.1305 28.0004 27.1305C24.1563 27.1305 21.0406 24.0138 21.0406 20.1704C21.0406 16.3269 24.1563 13.2109 28.0003 13.2109C31.8438 13.2109 34.9591 16.3269 34.9591 20.1704H34.9595Z"
                 fill="url(#paint0_radial_2204_541)"
@@ -158,28 +158,28 @@ export default function Home() {
                   transform="translate(12 13.2096)"
                 />
               </clipPath>
-            </defs>
+            </defs> */}
           </svg>
         </div>
         <div className="p-4 md:p-6">
-          <span className="block mb-1 text-xs font-semibold uppercase text-rose-600 dark:text-rose-500">
+          <span className="block mb-1 text-xs font-semibold uppercase text-secondary dark:text-rose-500">
             Online Editor
           </span>
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 ">
             Coding Chaska Lab
           </h3>
           <p className="mt-3 text-gray-500">
-            Track tasks and projects, use agile boards, measure progress.
+            CC Lab is lightweight online editor. You can solve coding problems too. 
           </p>
         </div>
         <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-          <a
+          <a target="_blank"
             className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://www.codingchaskalab.com/"
           >
-            View sample
+            Visit Site
           </a>
-          <a
+          <a 
             className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
             href="#"
           >
@@ -190,7 +190,7 @@ export default function Home() {
       {/* End Card */}
       {/* Card */}
       <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-        <div className="h-52 flex flex-col justify-center items-center bg-amber-500 rounded-t-xl">
+        <div className="h-52 flex flex-col justify-center items-center bg-accent rounded-t-xl">
           <svg
             className="w-28 h-28"
             width={56}
@@ -200,7 +200,7 @@ export default function Home() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect width={56} height={56} rx={10} fill="white" />
-            <path
+            {/* <path
               fillRule="evenodd"
               clipRule="evenodd"
               d="M23.7326 11.968C21.9637 11.9693 20.5321 13.4049 20.5334 15.1738C20.5321 16.9427 21.965 18.3782 23.7339 18.3795H26.9345V15.1751C26.9358 13.4062 25.5029 11.9706 23.7326 11.968C23.7339 11.968 23.7339 11.968 23.7326 11.968M23.7326 20.5184H15.2005C13.4316 20.5197 11.9987 21.9553 12 23.7242C11.9974 25.4931 13.4303 26.9286 15.1992 26.9312H23.7326C25.5016 26.9299 26.9345 25.4944 26.9332 23.7255C26.9345 21.9553 25.5016 20.5197 23.7326 20.5184V20.5184Z"
@@ -223,26 +223,26 @@ export default function Home() {
               clipRule="evenodd"
               d="M12 32.2746C11.9987 34.0435 13.4316 35.479 15.2005 35.4804C16.9694 35.479 18.4024 34.0435 18.401 32.2746V29.0688H15.2005C13.4316 29.0702 11.9987 30.5057 12 32.2746ZM20.5334 32.2746V40.825C20.5308 42.5939 21.9637 44.0295 23.7326 44.0321C25.5016 44.0308 26.9345 42.5952 26.9332 40.8263V32.2772C26.9358 30.5083 25.5029 29.0728 23.7339 29.0702C21.9637 29.0702 20.5321 30.5057 20.5334 32.2746C20.5334 32.2759 20.5334 32.2746 20.5334 32.2746Z"
               fill="#E01E5A"
-            />
+            /> */}
           </svg>
         </div>
         <div className="p-4 md:p-6">
-          <span className="block mb-1 text-xs font-semibold uppercase text-amber-500">
+          <span className="block mb-1 text-xs font-semibold uppercase text-accent">
             Manage Society
           </span>
           <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">
             FlatFolio
           </h3>
           <p className="mt-3 text-gray-500">
-            Email collaboration and email service desk made easy.
+            FlatFolio is designed to solve all critical problems of a Society. 
           </p>
         </div>
         <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-          <a
+          <a target="_blank"
             className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
+            href="https://flatfolio.vercel.app/"
           >
-            View sample
+            Visit Site
           </a>
           <a
             className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"

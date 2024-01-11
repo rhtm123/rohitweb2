@@ -49,8 +49,8 @@ function Thoughts () {
 <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   {/* <!-- Title --> */}
   <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-    <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">My thoughts</h2>
-    <p className="mt-1 text-gray-600 dark:text-gray-400">See how game-changing companies are making the most of every engagement with Preline.</p>
+    <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">My thoughts</h2>
+    <p className="mt-1">See how game-changing companies are making the most of every engagement with Preline.</p>
   </div>
   {/* <!-- End Title --> */}
 
@@ -72,7 +72,7 @@ function Thoughts () {
       alt={article.header} />
     </div>
     <div className="my-6">
-      <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
+      <h3 className="text-xl font-semibold">
         {article.header}
       </h3>
       {/* <p className="mt-5 text-gray-600 dark:text-gray-400">

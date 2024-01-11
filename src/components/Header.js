@@ -6,7 +6,7 @@ function Header(){
     return (
 <div className="navbar bg-base-200">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">Rohit Maurya</a>
+    <Link href="/" className="btn btn-ghost text-xl">Rohit Maurya</Link>
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">
