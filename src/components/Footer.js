@@ -18,9 +18,9 @@ function Footer() {
     </div>
 
     <p className="font-bold">
-      ACME Industries Ltd. <br/>Providing reliable tech since 1992
+      Coding Chaska | Lagao Coding Chaska<br/> 
     </p> 
-    <p>Copyright © 2024 - All right reserved</p>
+    <p>Copyright © 2024 - Learning Setu Private Limited</p>
   </aside> 
   <nav>
     <div className="grid grid-flow-col gap-4">
