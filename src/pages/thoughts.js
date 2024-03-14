@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import React, { useState, useEffect } from "react";
 
 function Thoughts () {
@@ -44,6 +45,13 @@ function Thoughts () {
 
 
     return (
+      <>
+      <Head>
+        <title>Read the toughts of Rohit Maurya</title>
+        <meta name="description" content="Rohit Maurya is founder of Coding Chaska. He teaches Python, Website development, Data Science, & Many more IT subjects" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      </Head>
+
         <main>
             {/* <!-- Card Blog --> */}
 <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -101,6 +109,8 @@ function Thoughts () {
 </div>
 
         </main>
+
+      </>
     )
 }
 

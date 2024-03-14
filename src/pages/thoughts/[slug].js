@@ -27,6 +27,9 @@ function Thought ({data, error}) {
 {/* <!-- Blog Article --> */}
 <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
   <div className="max-w-2xl">
+
+    <h1 className="text-4xl	pb-6 font-bold">{data?.header}</h1>
+
     {/* <!-- Avatar Media --> */}
     <div className="flex justify-between items-center mb-6">
       <div className="flex w-full sm:items-center gap-x-5 sm:gap-x-3">
