@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
 
-<Head>
+      <Head>
         <title>Website of Rohit Maurya, Founder Coding Chaska</title>
         <meta name="description" content="Rohit Maurya is founder of Coding Chaska. He teaches Python, Website development, Data Science, & Many more IT subjects" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -27,7 +27,7 @@ export default function Home() {
 <div className="py-4 px-4 sm:px-6 lg:px-8">
   {/* <!-- Grid --> */}
   <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12 lg:items-center">
-    <div className="py-6">
+    <div className="py-6" data-aos="fade-down">
       <h1 className="block text-3xl font-bold sm:text-4xl md:text-4xl lg:text-4xl ">Rohit Maurya (Developer & Teacher)</h1>
       <p className="my-3 text-lg">
       I am a passionate developer with a strong zeal to work with emerging startups. I love to work with the
@@ -54,7 +54,7 @@ export default function Home() {
     
 
 
-    <div className="my-10">
+    <div className="my-10" data-aos="fade-up">
       <img className="w-full rounded-xl" src="/images/hero1.jpg" alt="Rohit Maurya" />
     </div>
     {/* <!-- End Col --> */}
@@ -70,9 +70,9 @@ export default function Home() {
     <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl lg:text-4xl ">My Works</h1>
 
     {/* Grid */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Card */}
-      <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
         <div className="h-52 flex flex-col justify-center items-center bg-primary rounded-t-xl">
           
 
@@ -109,7 +109,7 @@ export default function Home() {
       </div>
       {/* End Card */}
       {/* Card */}
-      <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
         <div className="h-52 flex flex-col justify-center items-center bg-secondary rounded-t-xl">
           
             <TfiWrite size={48} />
@@ -144,7 +144,7 @@ export default function Home() {
       </div>
       {/* End Card */}
       {/* Card */}
-      <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
         <div className="h-52 flex flex-col justify-center items-center bg-accent rounded-t-xl">
 
             <LuBuilding size={48} />
