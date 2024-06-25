@@ -7,7 +7,10 @@ import { LuBuilding } from "react-icons/lu";
 
 
 
+
 export default function Home() {
+
+
   
   return (
     <>
@@ -180,6 +183,10 @@ export default function Home() {
       {/* End Card */}
     </div>
     {/* End Grid */}
+
+    
+
+
   </div>
 </>
 

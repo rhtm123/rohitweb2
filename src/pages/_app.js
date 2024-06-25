@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
+import ScheduleMeet from '@/components/ScheduleMeet';
+
 export default function App({ Component, pageProps }) {
 
   useEffect(() => {
@@ -25,6 +27,8 @@ export default function App({ Component, pageProps }) {
 
     <Layout>
       <Component {...pageProps} />
+
+      <ScheduleMeet />
     </Layout>
   </ThemeProvider>
 
