@@ -68,7 +68,141 @@ export default function Home() {
 
 
 
-<>
+<div className="bg-base-300 max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl lg:text-4xl">My Skills</h1>
+
+  {/* Grid */}
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/* Card 1 */}
+    {/* Add your existing cards here */}
+
+
+    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl">
+      <div className="p-4 md:p-6">
+        <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
+          Languages
+        </span>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="cursor-default	btn btn-sm">
+            Python
+          </span>
+          <span className="cursor-default btn btn-sm">
+            JavaScript
+          </span>
+          <span className="cursor-default btn btn-sm">
+            Java
+          </span>
+          {/* Add more technologies as needed */}
+        </div>
+      </div>
+    </div>
+
+
+    
+    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl ">
+      <div className="p-4 md:p-6">
+        <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
+          Frontend Libraries and frameworks
+        </span>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="cursor-default btn btn-sm">
+            React
+          </span>
+          <span className="cursor-default btn btn-sm">
+            NextJS
+          </span>
+          <span className="cursor-default btn btn-sm">
+            TailwindCSS
+          </span>
+          <span className="cursor-default btn btn-sm">
+            JavaScript
+          </span>
+          <span className="cursor-default btn btn-sm">
+            Svelte
+          </span>
+
+          {/* Add more technologies as needed */}
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl">
+      <div className="p-4 md:p-6">
+        <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
+          Backend
+        </span>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="cursor-default btn btn-sm">
+            Django
+          </span>
+          <span className="cursor-default btn btn-sm">
+            NodeJs & ExpressJS
+          </span>
+
+          <span className="cursor-default btn btn-sm">
+            FastAPI
+          </span>
+          <span className="cursor-default btn btn-sm">
+            Flask
+          </span>
+          {/* Add more technologies as needed */}
+        </div>
+      </div>
+    </div>
+  
+
+    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl ">
+      <div className="p-4 md:p-6">
+        <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
+          Database
+        </span>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="cursor-default btn btn-sm">
+            Postgres
+          </span>
+          <span className="cursor-default btn btn-sm">
+            MongoDB
+          </span>
+          <span className="cursor-default btn btn-sm">
+            Prisma
+          </span>
+
+          {/* Add more technologies as needed */}
+        </div>
+      </div>
+    </div>
+
+
+    <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl">
+      <div className="p-4 md:p-6">
+        <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
+          Tools & technologies
+        </span>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="cursor-default btn btn-sm">
+            Git & Github
+          </span> 
+          <span className="cursor-default btn btn-sm">
+            Docker
+          </span>
+          <span className="cursor-default btn btn-sm">
+            Vercel
+          </span>
+
+          {/* Add more technologies as needed */}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {/* End Grid */}
+</div>
+
+
+
   <div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl lg:text-4xl ">My Works</h1>
 
@@ -188,7 +322,7 @@ export default function Home() {
 
 
   </div>
-</>
+
 
 
 

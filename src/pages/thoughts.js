@@ -58,7 +58,7 @@ function Thoughts () {
   {/* <!-- Title --> */}
   <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
     <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">My thoughts</h2>
-    <p className="mt-1">See how game-changing companies are making the most of every engagement with Preline.</p>
+    <p className="mt-1">Read my articles on different topics here</p>
   </div>
   {/* <!-- End Title --> */}
 

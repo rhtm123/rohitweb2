@@ -6,7 +6,7 @@ function Footer() {
 
 
     return (
-        <footer className="footer footer-center bg-base-200 p-10" >
+        <footer className="footer footer-center bg-base-300 p-10" >
   <aside>
     <div className='py-4'>
       <span>Select Theme: </span>
