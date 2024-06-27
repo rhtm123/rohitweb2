@@ -176,7 +176,7 @@ export default function Home() {
     </div>
 
 
-    <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl">
+    <div data-aos="zoom-in" className="group flex flex-col h-full border bg-base-100 border-gray-200 shadow-sm rounded-xl">
       <div className="p-4 md:p-6">
         <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
           Tools & technologies
