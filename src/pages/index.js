@@ -31,7 +31,7 @@ export default function Home() {
   {/* <!-- Grid --> */}
   <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12 lg:items-center">
     <div className="py-6" data-aos="fade-down">
-      <h1 className="block text-3xl font-bold sm:text-4xl md:text-4xl lg:text-4xl ">Rohit Maurya (Developer & Teacher)</h1>
+      <h1 className="block text-3xl font-bold sm:text-4xl md:text-4xl lg:text-4xl ">Rohit Maurya [Developer & Trainer]</h1>
       <p className="my-3 text-lg">
       I am a passionate developer with a strong zeal to work with emerging startups. I love to work with the
               latest technologies and build modern and blazing fast websites.        
