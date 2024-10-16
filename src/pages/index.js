@@ -5,10 +5,17 @@ import { GrTechnology } from "react-icons/gr";
 import { TfiWrite } from "react-icons/tfi";
 import { LuBuilding } from "react-icons/lu";
 
+import { motion } from "framer-motion"; // Import Framer Motion
 
 
 
 export default function Home() {
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8 },
+  };
 
 
   
@@ -17,55 +24,35 @@ export default function Home() {
 
       <Head>
         <title>Website of Rohit Maurya, Founder Coding Chaska</title>
-        <meta name="description" content="Rohit Maurya is founder of Coding Chaska. He teaches Python, Website development, Data Science, & Many more IT subjects" />
+        <meta
+          name="description"
+          content="Rohit Maurya is founder of Coding Chaska. He teaches Python, Website development, Data Science, and Many more IT subjects"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
       </Head>
+
 
     <main>
 
+    <div className="py-4 px-4 sm:px-6 lg:px-8">
+          <motion.div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12 lg:items-center" initial="initial" animate="animate">
+            <motion.div className="py-6" {...fadeInUp}>
+              <h1 className="block text-3xl font-bold sm:text-4xl md:text-4xl lg:text-4xl">Rohit Maurya [Developer & Trainer]</h1>
+              <p className="my-3 text-lg">
+                I am a passionate developer with a strong zeal to work with emerging startups. I love to work with the latest technologies and build modern and blazing fast websites.
+              </p>
+              <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+                <Link href={"/thoughts/" + "why-did-i-choose-to-become-an-educator-than-an-employee"}>
+                  <button className="btn btn-primary">Know More</button>
+                </Link>
+              </div>
+            </motion.div>
 
-
-
-<div className="py-4 px-4 sm:px-6 lg:px-8">
-  {/* <!-- Grid --> */}
-  <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12 lg:items-center">
-    <div className="py-6" data-aos="fade-down">
-      <h1 className="block text-3xl font-bold sm:text-4xl md:text-4xl lg:text-4xl ">Rohit Maurya [Developer & Trainer]</h1>
-      <p className="my-3 text-lg">
-      I am a passionate developer with a strong zeal to work with emerging startups. I love to work with the
-              latest technologies and build modern and blazing fast websites.        
-        </p>
-
-      
-      <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-        
-        <Link href={"/thoughts/"+"why-did-i-choose-to-become-an-educator-than-an-employee"}>
-          <button className="btn btn-primary">
-          Know More 
-          </button>
-        </Link>
-      </div>
-
-
-      {/* <!-- Brands --> */}
-      
-      {/* <!-- End Brands --> */}
-    </div>
-    {/* <!-- End Col --> */}
-
-    
-
-
-    <div className="my-10" data-aos="fade-up">
-      <img className="w-full rounded-xl" src="/images/hero1.jpg" alt="Rohit Maurya" />
-    </div>
-    {/* <!-- End Col --> */}
-  </div>
-  {/* <!-- End Grid --> */}
-</div>
-{/* <!-- End Hero --> */}
-
+            <motion.div className="my-10" {...fadeInUp}>
+              <img className="w-full rounded-xl" src="/images/hero1.jpg" alt="Rohit Maurya" />
+            </motion.div>
+          </motion.div>
+        </div>
 
 
 <div className="bg-base-300 max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -77,7 +64,7 @@ export default function Home() {
     {/* Add your existing cards here */}
 
 
-    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl">
+    <div className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl">
       <div className="p-4 md:p-6">
         <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
           Languages
@@ -99,7 +86,7 @@ export default function Home() {
 
 
     
-    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl ">
+    <div className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl ">
       <div className="p-4 md:p-6">
         <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
           Frontend Libraries and frameworks
@@ -129,7 +116,7 @@ export default function Home() {
 
 
     
-    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl">
+    <div className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl">
       <div className="p-4 md:p-6">
         <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
           Backend
@@ -154,7 +141,7 @@ export default function Home() {
     </div>
   
 
-    <div data-aos="zoom-in" className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl ">
+    <div  className="group flex flex-col h-full bg-base-100 border border-gray-200 shadow-sm rounded-xl ">
       <div className="p-4 md:p-6">
         <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
           Database
@@ -176,7 +163,7 @@ export default function Home() {
     </div>
 
 
-    <div data-aos="zoom-in" className="group flex flex-col h-full border bg-base-100 border-gray-200 shadow-sm rounded-xl">
+    <div  className="group flex flex-col h-full border bg-base-100 border-gray-200 shadow-sm rounded-xl">
       <div className="p-4 md:p-6">
         <span className="block mb-4 opacity-80 text-xs font-semibold uppercase">
           Tools & technologies
@@ -203,13 +190,45 @@ export default function Home() {
 
 
 
+<div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+          <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl lg:text-4xl">Journey of Rohit Maurya</h1>
+          <motion.div className="grid sm:grid-cols-1 gap-6" initial="initial" animate="animate" variants={fadeInUp}>
+            {/* Timeline */}
+            <div className="flex flex-col space-y-6">
+              <div className="timeline-item">
+                <h3 className="text-lg font-semibold">April 2016 to Feb 2017</h3>
+                <p>Co-founded Tourepedia - Worked as a web developer</p>
+              </div>
+              <div className="timeline-item">
+                <h3 className="text-lg font-semibold">Mar 2017 to June 2017</h3>
+                <p>Worked at Mazkara Internet as a backend developer</p>
+              </div>
+              <div className="timeline-item">
+                <h3 className="text-lg font-semibold">Oct 2017 to May 2022</h3>
+                <p>Worked as freelance IT educator and worked on various IT projects as a freelancer</p>
+              </div>
+              <div className="timeline-item">
+                <h3 className="text-lg font-semibold">May 2022 - Present</h3>
+                <p>Co-founded Coding Chaska. Main focus on teaching technology</p>
+              </div>
+              <div className="timeline-item">
+                <h3 className="text-lg font-semibold">July 2024 - Present</h3>
+                <p>Co-founded Growtech Lab. Focus on IT projects</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+
+
+
   <div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl lg:text-4xl ">My Works</h1>
 
     {/* Grid */}
     <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Card */}
-      <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div  className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
         <div className="h-52 flex flex-col justify-center items-center bg-primary rounded-t-xl">
           
 
@@ -246,7 +265,7 @@ export default function Home() {
       </div>
       {/* End Card */}
       {/* Card */}
-      <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div  className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
         <div className="h-52 flex flex-col justify-center items-center bg-secondary rounded-t-xl">
           
             <TfiWrite size={48} />
@@ -281,7 +300,7 @@ export default function Home() {
       </div>
       {/* End Card */}
       {/* Card */}
-      <div data-aos="zoom-in" className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+      <div  className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
         <div className="h-52 flex flex-col justify-center items-center bg-accent rounded-t-xl">
 
             <LuBuilding size={48} />
