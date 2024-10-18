@@ -26,7 +26,7 @@ export default function Home() {
     {
       title: "Coding Chaska",
       subtitle: "Online Courses",
-      description: "Coding Chaska is a online learning platform where you can find interactive courses.",
+      description: "Coding Chaska is a online learning platform where you can find interactive courses, job ready programs, MCQs quizzes and more",
       link: "https://www.codingchaska.com/",
       github:"https://github.com/rhtm123/cc-frontend-v2",
       tech: ["NextJs", "Tailwind", "DaisyUI", "Django", "PostgreSQL"],
@@ -34,15 +34,32 @@ export default function Home() {
     {
       title: "Coding Chaska Lab",
       subtitle: "Online Editor",
-      description: "CC Lab is lightweight online editor. You can write code as well as solve coding problems.",
+      description: "CC Lab is lightweight online editor. You can write code in HTML & CSS as well as solve coding problems in Python.",
       link: "https://www.codingchaskalab.com/",
       github:"https://github.com/rhtm123/cc-lab",
       tech: ["Svelte", "Tailwind", "Django", "PostgreSQL"],
     },
+    
     {
-      title: "Manage Society",
+      title: "CraftMySite(CMS)",
+      subtitle: "Website Builder",
+      description: "It provides tailwind based website builder & code generator. Pre-built sections, live preview, easy editing. Try it our now",
+      link: "https://cms.growtechlab.com/",
+      github:"https://github.com/rhtm123/gt-website-builder",
+      tech: ["NextJs", "Django Ninja", "PostgreSQL", "Tailwind"],
+    },
+    {
+      title: "Milk Ease",
+      subtitle: "Blockchain Based Milk Supplychain",
+      description: "It is designed to streamline the dairy supply process, ensuring traceability, quality control, and secure data management.",
+      link: "https://milk-supplychain.vercel.app/",
+      github:"https://github.com/rhtm123/milk-supplychain",
+      tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
+    },
+    {
+      title: "Society Sathi",
       subtitle: "Society Management App",
-      description: "SocietySathi is designed to solve all critical problems of a Society.",
+      description: "It is designed to solve all critical problems of a Society. Penalty Systems, Automated NOC, Alert System, Flat & Complaints management system",
       link: "https://www.societysathi.com/",
       github:"https://github.com/rhtm123/ff-frontend",
       tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
@@ -175,10 +192,75 @@ export default function Home() {
 
 
 
-
-
-
 <div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
+    <h1 className="block text-3xl py-8 font-bold sm:text-4xl md:text-4xl md:text-4xl text-center">My Works</h1>
+
+    {/* Grid */}
+    <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/* Card */}
+
+      {projects.map((project, index)=>
+       <motion.div 
+        key={index}  
+        whileHover={{ scale: 1.04 }}
+        className="group flex flex-col bg-base-100 h-full hover:bg-base-200 border shadow-sm rounded-xl hover:shadow-lg">
+       
+       <div className="p-4 md:p-6">
+         <span className="block mb-1 text-xs font-semibold uppercase text-primary">
+           {project.subtitle}
+         </span>
+         <h3 className="text-xl font-semibold ">
+           {project.name}
+         </h3>
+         <p className="mt-3 opacity-75">
+           {project.description}
+         </p>
+
+         <div className="flex flex-wrap gap-2 pt-4">
+                {project.tech.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="badge badge-outline px-2 py-1 opacity-80"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+       </div>
+       <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200">
+         <a target="_blank"
+           className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-base-100 shadow-sm hover:bg-base-300 "
+           href={project.link}
+         >
+           Visit Site
+         </a>
+         <a 
+           target="_blank"
+           className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-base-100  shadow-sm hover:bg-base-300"
+           href={project.github}
+         >
+           View Code
+         </a>
+       </div>
+     </motion.div>
+      
+      )}
+    </div>
+    {/* End Grid */}
+    <div className="my-8 text-center">
+    <a href="https://www.growtechlab.com/projects" target="_blank" className="text-primary border px-2 py-1 rounded-lg">See all my works</a>
+    </div>
+    
+
+  </div>
+
+
+
+
+
+
+<div className="bg-base-100 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
 
         <h2 className="text-center text-4xl font-bold mb-10">
           My Skills & Technologies
@@ -319,7 +401,7 @@ export default function Home() {
 
 
 
-<div className="bg-base-100 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
+<div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
           <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl md:text-4xl text-center">My Journey</h1>
 
 
@@ -329,7 +411,7 @@ export default function Home() {
   <div className="group relative flex gap-x-5">
     {/* Icon */}
     <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-6 flex justify-center items-center">
+      <div className="relative z-10 size-8 flex justify-center items-center">
         <img src="/images/growtechlab.png" alt="Growtech Lab" />
       </div>
     </div>
@@ -391,7 +473,7 @@ export default function Home() {
   <div className="group relative flex gap-x-5">
     {/* Icon */}
     <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-6 flex justify-center items-center">
+      <div className="relative z-10 size-8 flex justify-center items-center">
         <img src="/images/codingchaska.png" alt="Coding Chaska" />
       </div>
     </div>
@@ -454,7 +536,7 @@ export default function Home() {
   <div className="group relative flex gap-x-5">
     {/* Icon */}
     <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-6 flex justify-center items-center">
+      <div className="relative z-10 size-8 flex justify-center items-center">
         <img src="/logo.png" alt="Freelance IT Trainer" />
       </div>
     </div>
@@ -478,8 +560,8 @@ export default function Home() {
   {/* Item */}
   <div className="group relative flex gap-x-5">
     {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-6 flex justify-center items-center">
+    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-4 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+      <div className="relative z-10 size-8 bg-base-300 flex justify-center items-center">
         <img src="/images/mazkara.jpg" alt="Mazkara Internet" />
       </div>
     </div>
@@ -506,7 +588,7 @@ export default function Home() {
   <div className="group relative flex gap-x-5">
     {/* Icon */}
     <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-6 flex justify-center items-center">
+      <div className="relative z-10 size-8 flex justify-center items-center">
         <img src="/images/tourepedia.jpg" alt="Tourepedia" />
       </div>
     </div>
@@ -531,7 +613,7 @@ export default function Home() {
   <div className="group relative flex gap-x-5">
     {/* Icon */}
     <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-6 flex justify-center items-center">
+      <div className="relative z-10 size-8 flex justify-center items-center">
         <img src="/images/iitkanpur.jpg" alt="IIT Kanpur" />
       </div>
     </div>
@@ -555,68 +637,6 @@ export default function Home() {
 
 
 
-  <div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
-    <h1 className="block text-3xl py-8 font-bold sm:text-4xl md:text-4xl md:text-4xl text-center">My Works</h1>
-
-    {/* Grid */}
-    <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {/* Card */}
-
-      {projects.map((project, index)=>
-       <motion.div 
-        key={index}  
-        whileHover={{ scale: 1.04 }}
-        className="group flex flex-col bg-base-100 h-full hover:bg-base-200 border shadow-sm rounded-xl hover:shadow-lg">
-       
-       <div className="p-4 md:p-6">
-         <span className="block mb-1 text-xs font-semibold uppercase text-primary">
-           {project.subtitle}
-         </span>
-         <h3 className="text-xl font-semibold ">
-           {project.name}
-         </h3>
-         <p className="mt-3 opacity-75">
-           {project.description}
-         </p>
-
-         <div className="flex flex-wrap gap-2 pt-4">
-                {project.tech.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="badge badge-outline px-2 py-1 opacity-80"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-       </div>
-       <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200">
-         <a target="_blank"
-           className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-base-100 shadow-sm hover:bg-base-300 "
-           href={project.link}
-         >
-           Visit Site
-         </a>
-         <a 
-           target="_blank"
-           className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-base-100  shadow-sm hover:bg-base-300"
-           href={project.github}
-         >
-           View Code
-         </a>
-       </div>
-     </motion.div>
-      
-      )}
-    </div>
-    {/* End Grid */}
-    <div className="my-8 text-center">
-    <a href="https://www.growtechlab.com/projects" target="_blank" className="text-primary border px-2 py-1 rounded-lg">See all my works</a>
-    </div>
-    
-
-  </div>
 
 
     </main>

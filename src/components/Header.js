@@ -1,4 +1,6 @@
-import Link from "next/link"
+import Link from "next/link";
+import { FaRegLightbulb } from "react-icons/fa6";
+
 
 function Header(){
 
@@ -17,9 +19,9 @@ function Header(){
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">
-      <li>
-        <Link href="/thoughts">THOUGHTS</Link>
-        </li>
+      <li className="border border-primary rounded-lg">
+        <Link href="/thoughts">My Thoughts <FaRegLightbulb /> </Link>
+      </li>
     
     </ul>
   </div>
