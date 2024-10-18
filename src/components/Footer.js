@@ -11,7 +11,7 @@ function Footer() {
 
 
     return (
-        <footer className="flex justify-between bg-base-300 py-2 px-4 md:px-8" >
+        <footer className="flex justify-between items-center bg-base-300 py-2 px-4 md:px-8" >
   <aside>
     <div className='py-2'>
       <span>Select Theme: </span>

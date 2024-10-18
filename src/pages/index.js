@@ -611,7 +611,7 @@ export default function Home() {
       )}
     </div>
     {/* End Grid */}
-    <div className="my-4 text-center">
+    <div className="my-8 text-center">
     <a href="https://www.growtechlab.com/projects" target="_blank" className="text-primary border px-2 py-1 rounded-lg">See all my works</a>
     </div>
     
