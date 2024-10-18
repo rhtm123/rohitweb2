@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
     <Layout>
       <Component {...pageProps} />
 
-      <ScheduleMeet />
+      {/* <ScheduleMeet /> */}
     </Layout>
   </ThemeProvider>
 

@@ -5,6 +5,12 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+
+  theme: {
+    fontFamily: {
+      // 'sans': ['ui-monospace', 'SFMono-Regular', 'ui-sans-serif']
+    }
+  },
   daisyui: {
     themes: ["light", "dark", "cupcake"],
   },

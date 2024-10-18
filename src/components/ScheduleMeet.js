@@ -29,10 +29,10 @@ const ScheduleMeet = ({ url = 'https://calendly.com/maurya-iitk/30min' }) => {
       />
       <a 
         
-        className="fixed bottom-4 right-4 z-50 btn btn-accent border"
+        className="fixed bottom-16 right-4 md:right-8 z-50 btn btn-primary border"
 
       href="#" onClick={handleClick}>
-        Schedule time with me
+        Schedule Meet
         <FaRegClock />
       </a>
     </>
