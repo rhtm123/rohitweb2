@@ -32,6 +32,14 @@ export default function Home() {
       tech: ["NextJs", "Tailwind", "DaisyUI", "Django", "PostgreSQL"],
     },
     {
+      title: "Naigaon Market",
+      subtitle: "Hyperlocal Online Store",
+      description: "Naigaon Market redefining what e-commerce should look like for local communities. Local Store is winning hearts and wallets",
+      link: "https://www.naigaonmarket.com/",
+      github:"https://github.com/rhtm123/ecommerce-frontend",
+      tech: ["Sveltekit", "Tailwind", "DaisyUI", "Django", "Postgres", "Django Ninja", "Twilio"],
+    },
+    {
       title: "Coding Chaska Lab",
       subtitle: "Online Editor",
       description: "CC Lab is lightweight online editor. You can write code in HTML & CSS as well as solve coding problems in Python.",
