@@ -83,7 +83,7 @@ export default function Home() {
         <title>Website of Rohit Maurya, Founder Coding Chaska</title>
         <meta
           name="description"
-          content="Rohit Maurya is founder of Coding Chaska. He teaches Python, Website development, Data Science, and Many more IT subjects"
+          content="Rohit Maurya is founder of Coding Chaska, GrowTech Lab & Naigaon Market. He teaches Python, Website development, Data Science, and Many more IT subjects"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
@@ -415,6 +415,66 @@ export default function Home() {
 
 
           <div className="md:w-4/6 md:m-auto py-6">
+
+          <div className="group relative flex gap-x-5">
+      {/* Icon */}
+      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+        <div className="relative z-10 size-8 flex justify-center items-center">
+          <img src="/images/nm.png" alt="Naigaon Market" />
+        </div>
+      </div>
+      {/* End Icon */}
+      {/* Right Content */}
+      <div className="grow pb-8 group-last:pb-0">
+        <h3 className="mb-1 text-xs opacity-80">
+          March 2025 - Present
+        </h3>
+        <p className="font-semibold text-sm ">
+          Founder, Naigaon Market
+        </p>
+        <p className="mt-1 text-sm opacity-75">
+          Building a hyper-local e-commerce platform empowering Naigaon sellers and buyers through fair pricing and community-focused commerce.
+        </p>
+        <ul className="list-disc ms-6 mt-3 space-y-1">
+          <li className="ps-1 text-sm opacity-75">
+            Created platform with 15-25% higher seller margins than national competitors
+          </li>
+          <li className="ps-1 text-sm opacity-75">
+            Implemented same-day delivery system covering Naigaon area
+          </li>
+          <li className="ps-1 text-sm opacity-75">
+            Onboarded 10+ local sellers in first 1 month
+          </li>
+        </ul>
+
+        <div className="mt-4">
+          <a
+            className="block border rounded-lg hover:shadow-sm focus:outline-none"
+            href="https://www.naigaonmarket.com/"
+            target="_blank"
+          >
+            <div className="relative flex items-center overflow-hidden">
+              <img
+                className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
+                src="/images/nm_cover.png"
+                alt="Naigaon Market Platform"
+              />
+              <div className="grow p-4 ms-32 sm:ms-48">
+                <div className="min-h-24 flex flex-col justify-center">
+                  <h3 className="font-semibold text-sm text-primary">
+                    Naigaon Market
+                  </h3>
+                  <p className="mt-1 text-sm opacity-75">
+                    Your local marketplace for best prices, faster delivery, and community empowerment
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
   {/* Item */}
   <div className="group relative flex gap-x-5">
     {/* Icon */}
