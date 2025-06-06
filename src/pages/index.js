@@ -1,24 +1,20 @@
-
 import Link from "next/link";
 import Head from "next/head";
-// import { GrTechnology } from "react-icons/gr";
-// import { TfiWrite } from "react-icons/tfi";
-// import { LuBuilding } from "react-icons/lu";
-
-import { motion } from "framer-motion"; // Import Framer Motion
+import { FaCode, FaLaptopCode, FaServer, FaDatabase, FaTools, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Home() {
-
   const fadeInUp = {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8 },
+    transition: { duration: 0.8, ease: "easeOut" },
   };
 
   const cardVariants = {
     hover: {
-      scale: 1.05,
-      boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
+      scale: 1.03,
+      boxShadow: "0px 12px 24px rgba(0, 0, 0, 0.15)",
+      transition: { duration: 0.3 },
     },
   };
 
@@ -26,689 +22,344 @@ export default function Home() {
     {
       title: "Coding Chaska",
       subtitle: "Online Courses",
-      description: "Coding Chaska is a online learning platform where you can find interactive courses, job ready programs, MCQs quizzes and more",
+      description: "Interactive learning platform offering courses, job-ready programs, and MCQ quizzes.",
       link: "https://www.codingchaska.com/",
-      github:"https://github.com/rhtm123/cc-frontend-v2",
+      github: "https://github.com/rhtm123/cc-frontend-v2",
       tech: ["NextJs", "Tailwind", "DaisyUI", "Django", "PostgreSQL"],
     },
     {
       title: "Naigaon Market",
       subtitle: "Hyperlocal Online Store",
-      description: "Naigaon Market redefining what e-commerce should look like for local communities. Local Store is winning hearts and wallets",
+      description: "Redefining e-commerce for local communities with fair pricing and fast delivery.",
       link: "https://www.naigaonmarket.com/",
-      github:"https://github.com/rhtm123/ecommerce-frontend",
+      github: "https://github.com/rhtm123/ecommerce-frontend",
       tech: ["Sveltekit", "Tailwind", "DaisyUI", "Django", "Postgres", "Django Ninja", "Twilio"],
     },
     {
       title: "Coding Chaska Lab",
       subtitle: "Online Editor",
-      description: "CC Lab is lightweight online editor. You can write code in HTML & CSS as well as solve coding problems in Python.",
+      description: "Lightweight editor for HTML, CSS, and Python coding practice.",
       link: "https://www.codingchaskalab.com/",
-      github:"https://github.com/rhtm123/cc-lab",
+      github: "https://github.com/rhtm123/cc-lab",
       tech: ["Svelte", "Tailwind", "Django", "PostgreSQL"],
     },
-    
     {
       title: "CraftMySite(CMS)",
       subtitle: "Website Builder",
-      description: "It provides tailwind based website builder & code generator. Pre-built sections, live preview, easy editing. Try it our now",
+      description: "Tailwind-based website builder with pre-built sections and live preview.",
       link: "https://cms.growtechlab.com/",
-      github:"https://github.com/rhtm123/gt-website-builder",
+      github: "https://github.com/rhtm123/gt-website-builder",
       tech: ["NextJs", "Django Ninja", "PostgreSQL", "Tailwind"],
     },
     {
       title: "Milk Ease",
       subtitle: "Blockchain Based Milk Supplychain",
-      description: "It is designed to streamline the dairy supply process, ensuring traceability, quality control, and secure data management.",
+      description: "Streamlines dairy supply with traceability and secure data management.",
       link: "https://milk-supplychain.vercel.app/",
-      github:"https://github.com/rhtm123/milk-supplychain",
+      github: "https://github.com/rhtm123/milk-supplychain",
       tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
     },
     {
       title: "Society Sathi",
       subtitle: "Society Management App",
-      description: "It is designed to solve all critical problems of a Society. Penalty Systems, Automated NOC, Alert System, Flat & Complaints management system",
+      description: "Manages society operations with penalty systems, NOC, and alerts.",
       link: "https://www.societysathi.com/",
-      github:"https://github.com/rhtm123/ff-frontend",
+      github: "https://github.com/rhtm123/ff-frontend",
       tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
     },
   ];
 
-
-  
   return (
     <>
-
       <Head>
-        <title>Website of Rohit Maurya, Founder Coding Chaska</title>
+        <title>Website of Rohit Maurya, Lead Trainer at Coding Chaska</title>
         <meta
           name="description"
-          content="Rohit Maurya is founder of Coding Chaska, GrowTech Lab & Naigaon Market. He teaches Python, Website development, Data Science, and Many more IT subjects"
+          content="Rohit Maurya is the Lead Trainer at Coding Chaska and Co-Founder of GrowTech Lab and Naigaon Market. He teaches Python, Web Development, Data Science, and more."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
 
-
-    <main>
-
-          {/* <HoverEffect items={projects} /> */}
-
-
-    <>
-  {/* Hero */}
-  <div className="max-w-[85rem] mx-auto px-4 sm:px-6 md:px-8 mt-8 mb-12">
-    {/* Grid */}
-    <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-      <div>
-        <h1 className="block text-3xl font-bold md:text-4xl md:leading-tight">
-          Creating innovative IT projects <span className="text-primary">Educating future innovators</span>
-        </h1>
-        <p className="mt-3 text-lg opacity-90">
-        Founder @ Coding Chaska & Growtech Lab. I am a passionate developer with a strong zeal to work with emerging startups. I love to work with the latest technologies and build modern and blazing fast websites.
-
-        </p>
-{/* 
-        <div className="py-4 opacity-80">
-            <span className="font-bold">✅ 500+  </span> students taught ✅ <span className="font-bold">10+ </span> complex IT projects delivered
-        </div> */}
-
-        {/* Buttons */}
-        <div className="mt-4 grid gap-3 w-full sm:inline-flex">
-
-        <a
-            className="btn btn-primary"
-            href="https://www.codingchaska.com/"
-            target="_blank"
-          >
-            Coding Chaska
-            <svg
-              className="shrink-0 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </a>
-          
-          
-          <a
-            className="btn btn-primary btn-outline"
-            href="https://www.growtechlab.com/"
-            target="_blank"
-          >
-            Growtech Lab
-          </a>
-
-          
+      <main className="bg-base-100">
+        {/* Hero Section */}
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <motion.div {...fadeInUp}>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                Innovating IT Solutions <span className="text-primary">Empowering Future Coders</span>
+              </h1>
+              <p className="mt-4 text-lg text-base-content/80 leading-relaxed">
+                Lead Trainer @ Coding Chaska and Co-Founder @ Growtech Lab & Naigaon Market. Passionate about building modern, high-performance web solutions and mentoring the next generation of developers.
+              </p>
+              <div className="mt-6 flex gap-4">
+                <a href="https://www.naigaonmarket.com/" target="_blank" className="btn btn-primary btn-md">
+                  Naigaon Market <FaArrowRight className="ml-2" />
+                </a>
+                <a href="https://www.growtechlab.com/" target="_blank" className="btn btn-outline btn-primary btn-md">
+                  Growtech Lab
+                </a>
+              </div>
+            </motion.div>
+            <motion.div {...fadeInUp} className="relative">
+              <img className="w-full rounded-2xl shadow-lg" src="/images/hero1.jpg" alt="Rohit Maurya" />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary/20 via-base-100/0 to-base-100/0 rounded-2xl" />
+            </motion.div>
+          </div>
         </div>
-        {/* End Buttons */}
-       
 
-
-      
-      </div>
-      {/* End Col */}
-      <motion.div className="relative ms-4" initial="initial" animate="animate">
-        <img
-          className="w-full rounded-xl" src="/images/hero1.jpg" alt="Rohit Maurya" 
-        />
-        <motion.div  className="absolute inset-0 -z-[1] bg-gradient-to-tr from-primary via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 md:mt-6 md:-mb-6 md:me-6 md:-ms-6 dark:from-primary dark:via-neutral-900/0 dark:to-neutral-900/0" {...fadeInUp} />
-        {/* SVG*/}
-        <div className="absolute bottom-0 start-0">
-          <svg
-            className="w-2/3 ms-auto h-auto text-primary"
-            width={630}
-            height={451}
-            viewBox="0 0 630 451"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x={531} y={352} width={99} height={99} fill="currentColor" />
-            <rect x={140} y={352} width={106} height={99} fill="currentColor" />
-            <rect x={482} y={402} width={64} height={49} fill="currentColor" />
-            <rect x={433} y={402} width={63} height={49} fill="currentColor" />
-            <rect x={384} y={352} width={49} height={50} fill="currentColor" />
-            <rect x={531} y={328} width={50} height={50} fill="currentColor" />
-            <rect x={99} y={303} width={49} height={58} fill="currentColor" />
-            <rect x={99} y={352} width={49} height={50} fill="currentColor" />
-            <rect x={99} y={392} width={49} height={59} fill="currentColor" />
-            <rect x={44} y={402} width={66} height={49} fill="currentColor" />
-            <rect x={234} y={402} width={62} height={49} fill="currentColor" />
-            <rect x={334} y={303} width={50} height={49} fill="currentColor" />
-            <rect x={581} width={49} height={49} fill="currentColor" />
-            <rect x={581} width={49} height={64} fill="currentColor" />
-            <rect x={482} y={123} width={49} height={49} fill="currentColor" />
-            <rect x={507} y={124} width={49} height={24} fill="currentColor" />
-            <rect x={531} y={49} width={99} height={99} fill="currentColor" />
-          </svg>
+        {/* Projects Section */}
+        <div className="bg-base-200 py-16">
+          <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-center mb-12">My Works</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  whileHover="hover"
+                  className="card bg-base-100 border border-base-300 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+                >
+                  <div className="card-body">
+                    <span className="text-sm font-semibold text-primary uppercase">{project.subtitle}</span>
+                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <p className="text-base-content/70">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {project.tech.map((tech, idx) => (
+                        <span key={idx} className="badge badge-outline badge-sm text-base-content/80">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="card-actions mt-4 flex justify-between">
+                      <a href={project.link} target="_blank" className="btn btn-sm btn-primary">
+                        Visit Site
+                      </a>
+                      <a href={project.github} target="_blank" className="btn btn-sm btn-outline">
+                        View Code
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <a href="https://www.growtechlab.com/projects" target="_blank" className="btn btn-ghost text-primary">
+                See All Projects
+              </a>
+            </div>
+          </div>
         </div>
-        {/* End SVG*/}
-      </motion.div>
-      {/* End Col */}
-    </div>
-    {/* End Grid */}
-  </div>
-  {/* End Hero */}
-</>
 
-
-
-<div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
-    <h1 className="block text-3xl py-8 font-bold sm:text-4xl md:text-4xl md:text-4xl text-center">My Works</h1>
-
-    {/* Grid */}
-    <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {/* Card */}
-
-      {projects.map((project, index)=>
-       <motion.div 
-        key={index}  
-        whileHover={{ scale: 1.04 }}
-        className="group flex flex-col bg-base-100 h-full hover:bg-base-200 border shadow-sm rounded-xl hover:shadow-lg">
-       
-       <div className="p-4 md:p-6">
-         <span className="block mb-1 text-xs font-semibold uppercase text-primary">
-           {project.subtitle}
-         </span>
-         <h3 className="text-xl font-semibold ">
-           {project.name}
-         </h3>
-         <p className="mt-3 opacity-75">
-           {project.description}
-         </p>
-
-         <div className="flex flex-wrap gap-2 pt-4">
-                {project.tech.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="badge badge-outline px-2 py-1 opacity-80"
-                  >
+        {/* Skills Section */}
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div variants={cardVariants} whileHover="hover" className="card bg-base-100 border border-base-300 rounded-xl shadow-md p-6">
+              <FaCode className="text-3xl text-primary mb-4" />
+              <span className="text-sm font-semibold uppercase text-base-content/80">Languages</span>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {["Python", "JavaScript", "Java"].map((tech, idx) => (
+                  <span key={idx} className="badge badge-outline badge-sm text-base-content/80">
                     {tech}
                   </span>
                 ))}
               </div>
-
-       </div>
-       <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200">
-         <a target="_blank"
-           className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-base-100 shadow-sm hover:bg-base-300 "
-           href={project.link}
-         >
-           Visit Site
-         </a>
-         <a 
-           target="_blank"
-           className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-base-100  shadow-sm hover:bg-base-300"
-           href={project.github}
-         >
-           View Code
-         </a>
-       </div>
-     </motion.div>
-      
-      )}
-    </div>
-    {/* End Grid */}
-    <div className="my-8 text-center">
-    <a href="https://www.growtechlab.com/projects" target="_blank" className="text-primary border px-2 py-1 rounded-lg">See all my works</a>
-    </div>
-    
-
-  </div>
-
-
-
-
-
-
-<div className="bg-base-100 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
-
-        <h2 className="text-center text-4xl font-bold mb-10">
-          My Skills & Technologies
-        </h2>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 py-4 gap-6">
-          {/* Card 1 - Languages */}
-          <motion.div
-            variants={cardVariants}
-            whileHover="hover"
-            className="group flex flex-col h-full bg-base-100 hover:bg-base-200 border shadow-sm rounded-xl p-6"
-          >
-            <div>
-              <span className="block mb-4 opacity-80 font-semibold uppercase">
-                Languages
-              </span>
+            </motion.div>
+            <motion.div variants={cardVariants} whileHover="hover" className="card bg-base-100 border border-base-300 rounded-xl shadow-md p-6">
+              <FaLaptopCode className="text-3xl text-primary mb-4" />
+              <span className="text-sm font-semibold uppercase text-base-content/80">Frontend</span>
               <div className="flex flex-wrap gap-2 mt-2">
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Python
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  JavaScript
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Java
-                </span>
+                {["React", "NextJS", "TailwindCSS", "Svelte"].map((tech, idx) => (
+                  <span key={idx} className="badge badge-outline badge-sm text-base-content/80">
+                    {tech}
+                  </span>
+                ))}
               </div>
-            </div>
-          </motion.div>
-
-          {/* Card 2 - Frontend Libraries */}
-          <motion.div
-            variants={cardVariants}
-            whileHover="hover"
-            className="group flex flex-col h-full bg-base-100 hover:bg-base-200 border shadow-sm rounded-xl p-6"
-          >
-            <div>
-              <span className="block mb-4 opacity-80 font-semibold uppercase">
-                Frontend Libraries & Frameworks
-              </span>
+            </motion.div>
+            <motion.div variants={cardVariants} whileHover="hover" className="card bg-base-100 border border-base-300 rounded-xl shadow-md p-6">
+              <FaServer className="text-3xl text-primary mb-4" />
+              <span className="text-sm font-semibold uppercase text-base-content/80">Backend</span>
               <div className="flex flex-wrap gap-2 mt-2">
-                <span className="cursor-default badge badge-outline opacity-75">
-                  React
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  NextJS
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  TailwindCSS
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Svelte
-                </span>
+                {["Django", "NodeJS & ExpressJS", "FastAPI", "Flask"].map((tech, idx) => (
+                  <span key={idx} className="badge badge-outline badge-sm text-base-content/80">
+                    {tech}
+                  </span>
+                ))}
               </div>
-            </div>
-          </motion.div>
-
-          {/* Card 3 - Backend */}
-          <motion.div
-            variants={cardVariants}
-            whileHover="hover"
-            className="group flex flex-col h-full bg-base-100 hover:bg-base-200 border shadow-sm rounded-xl p-6"
-          >
-            <div>
-              <span className="block mb-4 opacity-80 font-semibold uppercase">
-                Backend
-              </span>
+            </motion.div>
+            <motion.div variants={cardVariants} whileHover="hover" className="card bg-base-100 border border-base-300 rounded-xl shadow-md p-6">
+              <FaDatabase className="text-3xl text-primary mb-4" />
+              <span className="text-sm font-semibold uppercase text-base-content/80">Database</span>
               <div className="flex flex-wrap gap-2 mt-2">
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Django
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  NodeJS & ExpressJS
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  FastAPI
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Flask
-                </span>
+                {["Postgres", "MongoDB", "Prisma"].map((tech, idx) => (
+                  <span key={idx} className="badge badge-outline badge-sm text-base-content/80">
+                    {tech}
+                  </span>
+                ))}
               </div>
-            </div>
-          </motion.div>
-
-          {/* Card 4 - Database */}
-          <motion.div
-            variants={cardVariants}
-            whileHover="hover"
-            className="group flex flex-col h-full bg-base-100 hover:bg-base-200 border shadow-sm rounded-xl p-6"
-          >
-            <div>
-              <span className="block mb-4 opacity-80 font-semibold uppercase">
-                Database
-              </span>
+            </motion.div>
+            <motion.div variants={cardVariants} whileHover="hover" className="card bg-base-100 border border-base-300 rounded-xl shadow-md p-6">
+              <FaTools className="text-3xl text-primary mb-4" />
+              <span className="text-sm font-semibold uppercase text-base-content/80">Tools</span>
               <div className="flex flex-wrap gap-2 mt-2">
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Postgres
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  MongoDB
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Prisma
-                </span>
+                {["Git & GitHub", "Docker", "Vercel"].map((tech, idx) => (
+                  <span key={idx} className="badge badge-outline badge-sm text-base-content/80">
+                    {tech}
+                  </span>
+                ))}
               </div>
-            </div>
-          </motion.div>
-
-          {/* Card 5 - Tools & Technologies */}
-          <motion.div
-            variants={cardVariants}
-            whileHover="hover"
-            className="group flex flex-col h-full bg-base-100 hover:bg-base-200 border shadow-sm rounded-xl p-6"
-          >
-            <div>
-              <span className="block mb-4 opacity-80 font-semibold uppercase">
-                Tools & Technologies
-              </span>
-              <div className="flex flex-wrap gap-2 mt-2">
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Git & GitHub
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Docker
-                </span>
-                <span className="cursor-default badge badge-outline opacity-75">
-                  Vercel
-                </span>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
+        {/* Journey Section */}
+        <div className="bg-base-200 py-16">
+          <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-center mb-12">My Journey</h2>
+            <div className="md:w-3/4 mx-auto">
+              {/* Naigaon Market - Co-Founder */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/images/nm.png" alt="Naigaon Market" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">June 2025 - Present</h3>
+                  <p className="font-semibold text-lg">Co-Founder, Naigaon Market</p>
+                  <p className="mt-2 text-base-content/80">
+                    Building a hyper-local e-commerce platform for Naigaon, focusing on fair pricing and community-driven commerce.
+                  </p>
+                  <ul className="list-disc pl-5 mt-3 text-base-content/80">
+                    <li>Developed platform with 15-25% higher seller margins than competitors.</li>
+                    <li>Implemented same-day delivery system for Naigaon.</li>
+                    <li>Onboarded 10+ local sellers in the first month.</li>
+                  </ul>
+                  <a href="https://www.naigaonmarket.com/" target="_blank" className="mt-4 block card bg-base-100 border border-base-300 rounded-xl shadow-sm hover:shadow-md">
+                    <div className="flex items-center">
+                      <img src="/images/nm_cover.png" alt="Naigaon Market" className="w-24 h-24 object-cover rounded-l-xl" />
+                      <div className="p-4">
+                        <h3 className="font-semibold text-primary">Naigaon Market</h3>
+                        <p className="text-sm text-base-content/80">Local marketplace for best prices and fast delivery.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {/* Growtech Lab */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/images/growtechlab.png" alt="Growtech Lab" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">Jul 2024 - Present</h3>
+                  <p className="font-semibold text-lg">Co-Founder, Growtech Lab</p>
+                  <p className="mt-2 text-base-content/80">
+                    Leading IT solutions provider focusing on digital marketing and custom web development.
+                  </p>
+                  <ul className="list-disc pl-5 mt-3 text-base-content/80">
+                    <li>Spearheaded projects for SMBs to enterprise clients.</li>
+                    <li>Introduced client-friendly CMS and website builder tools.</li>
+                    <li>Built a team delivering innovative solutions.</li>
+                  </ul>
+                  <a href="https://www.growtechlab.com/" target="_blank" className="mt-4 block card bg-base-100 border border-base-300 rounded-xl shadow-sm hover:shadow-md">
+                    <div className="flex items-center">
+                      <img src="https://www.growtechlab.com/image/apna-website-hero.jpg" alt="Growtech Lab" className="w-24 h-24 object-cover rounded-l-xl" />
+                      <div className="p-4">
+                        <h3 className="font-semibold text-primary">Growtech Lab</h3>
+                        <p className="text-sm text-base-content/80">Expert website development and digital marketing solutions.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {/* Coding Chaska */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/images/codingchaska.png" alt="Coding Chaska" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">May 2022 - Present</h3>
+                  <p className="font-semibold text-lg">Lead Trainer, Coding Chaska</p>
+                  <p className="mt-2 text-base-content/80">
+                    Managing an IT education platform, overseeing curriculum development, and mentoring students.
+                  </p>
+                  <ul className="list-disc pl-5 mt-3 text-base-content/80">
+                    <li>Launched courses in web development, data science, and Python.</li>
+                    <li>Partnered with institutions to expand curriculum reach.</li>
+                    <li>Mentored students to secure tech internships and jobs.</li>
+                  </ul>
+                  <a href="https://www.codingchaska.com/" target="_blank" className="mt-4 block card bg-base-100 border border-base-300 rounded-xl shadow-sm hover:shadow-md">
+                    <div className="flex items-center">
+                      <img src="https://www.codingchaska.com/images/home/hero_new.avif" alt="Coding Chaska" className="w-24 h-24 object-cover rounded-l-xl" />
+                      <div className="p-4">
+                        <h3 className="font-semibold text-primary">Coding Chaska</h3>
+                        <p className="text-sm text-base-content/80">Job-ready programs and live coding courses.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {/* Freelance IT Trainer */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/logo.png" alt="Freelance IT Trainer" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">Oct 2017 - Presents</h3>
+                  <p className="font-semibold text-lg">Freelance IT Trainer</p>
+                  <p className="mt-2 text-base-content/80">
+                    Provided IT training in Python, web development, and data science while delivering web projects across industries.
+                  </p>
 
-</div>
-
-
-
-
-
-<div className="bg-base-200 max-w-[85rem] px-4 py-10 sm:px-6 md:px-8 md:py-14 mx-auto">
-          <h1 className="block text-3xl py-4 font-bold sm:text-4xl md:text-4xl md:text-4xl text-center">My Journey</h1>
-
-
-
-          <div className="md:w-4/6 md:m-auto py-6">
-
-          <div className="group relative flex gap-x-5">
-      {/* Icon */}
-      <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-        <div className="relative z-10 size-8 flex justify-center items-center">
-          <img src="/images/nm.png" alt="Naigaon Market" />
-        </div>
-      </div>
-      {/* End Icon */}
-      {/* Right Content */}
-      <div className="grow pb-8 group-last:pb-0">
-        <h3 className="mb-1 text-xs opacity-80">
-          March 2025 - Present
-        </h3>
-        <p className="font-semibold text-sm ">
-          Founder, Naigaon Market
-        </p>
-        <p className="mt-1 text-sm opacity-75">
-          Building a hyper-local e-commerce platform empowering Naigaon sellers and buyers through fair pricing and community-focused commerce.
-        </p>
-        <ul className="list-disc ms-6 mt-3 space-y-1">
-          <li className="ps-1 text-sm opacity-75">
-            Created platform with 15-25% higher seller margins than national competitors
-          </li>
-          <li className="ps-1 text-sm opacity-75">
-            Implemented same-day delivery system covering Naigaon area
-          </li>
-          <li className="ps-1 text-sm opacity-75">
-            Onboarded 10+ local sellers in first 1 month
-          </li>
-        </ul>
-
-        <div className="mt-4">
-          <a
-            className="block border rounded-lg hover:shadow-sm focus:outline-none"
-            href="https://www.naigaonmarket.com/"
-            target="_blank"
-          >
-            <div className="relative flex items-center overflow-hidden">
-              <img
-                className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-                src="/images/nm_cover.png"
-                alt="Naigaon Market Platform"
-              />
-              <div className="grow p-4 ms-32 sm:ms-48">
-                <div className="min-h-24 flex flex-col justify-center">
-                  <h3 className="font-semibold text-sm text-primary">
-                    Naigaon Market
-                  </h3>
-                  <p className="mt-1 text-sm opacity-75">
-                    Your local marketplace for best prices, faster delivery, and community empowerment
+                  <ul className="list-disc pl-5 mt-3 text-base-content/80">
+                    <li>Conducted online training using platforms like Zoom, Google Classroom, and digital whiteboards.</li>
+                    <li>Focused on concept clarity, problem-solving, and building real-world coding skills.</li>
+                    <li>Conducted workshops, live coding sessions, and project reviews to reinforce practical understanding</li>
+                  </ul>
+                </div>
+              </div>
+              {/* Mazkara Internet */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/images/mazkara.jpg" alt="Mazkara Internet" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">Mar 2017 - Jun 2017</h3>
+                  <p className="font-semibold text-lg">Backend Developer, Mazkara Internet</p>
+                  <p className="mt-2 text-base-content/80">
+                    Built and optimized backend systems, integrating third-party services for reliable data flow.
+                  </p>
+                </div>
+              </div>
+              {/* Tourepedia */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/images/tourepedia.jpg" alt="Tourepedia" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">Apr 2016 - Feb 2017</h3>
+                  <p className="font-semibold text-lg">Co-Founder, Tourepedia</p>
+                  <p className="mt-2 text-base-content/80">
+                    Led website development for a travel platform, enhancing user experience for tour planning and booking.
+                  </p>
+                </div>
+              </div>
+              {/* IIT Kanpur */}
+              <div className="relative flex gap-6 pb-8">
+                <div className="relative after:absolute after:top-10 after:bottom-0 after:left-4 after:w-px after:bg-base-300">
+                  <img src="/images/iitkanpur.jpg" alt="IIT Kanpur" className="w-8 h-8 rounded-full" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm text-base-content/70">2012 - 2016</h3>
+                  <p className="font-semibold text-lg">BS Physics, IIT Kanpur</p>
+                  <p className="mt-2 text-base-content/80">
+                    Gained expertise in physics, computational techniques, and problem-solving.
                   </p>
                 </div>
               </div>
             </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  {/* Item */}
-  <div className="group relative flex gap-x-5">
-    {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-8 flex justify-center items-center">
-        <img src="/images/growtechlab.png" alt="Growtech Lab" />
-      </div>
-    </div>
-    {/* End Icon */}
-    {/* Right Content */}
-    <div className="grow pb-8 group-last:pb-0">
-      <h3 className="mb-1 text-xs opacity-80">
-        Jul 2024 - Present
-      </h3>
-      <p className="font-semibold text-sm ">
-        Co-Founder, Growtech Lab
-      </p>
-      <p className="mt-1 text-sm opacity-75">
-        Leading the company toward becoming a top IT solutions provider, focusing on digital marketing, custom website development, and tech-driven solutions.
-      </p>
-      <ul className="list-disc ms-6 mt-3 space-y-1">
-        <li className="ps-1 text-sm opacity-75">
-          Spearheaded multiple client projects from SMBs to enterprise-level.
-        </li>
-        <li className="ps-1 text-sm opacity-75">
-          Introduced client-friendly CMS and website builder tools.
-        </li>
-        <li className="ps-1 text-sm opacity-75">
-          Built a talented team focused on delivering innovative solutions.
-        </li>
-      </ul>
-
-      <div className="mt-4">
-        <a
-          className="block border rounded-lg hover:shadow-sm focus:outline-none"
-          href="https://www.growtechlab.com/"
-          target="_blank"
-        >
-          <div className="relative flex items-center overflow-hidden">
-            <img
-              className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-              src="https://www.growtechlab.com/image/apna-website-hero.jpg"
-              alt="Growtech Lab Website"
-            />
-            <div className="grow p-4 ms-32 sm:ms-48">
-              <div className="min-h-24 flex flex-col justify-center">
-                <h3 className="font-semibold text-sm text-primary">
-                  Growtech Lab
-                </h3>
-                <p className="mt-1 text-sm opacity-75">
-                Transform Your Online Presence with Expert Website Development, Mobile App Creation, and Strategic Digital Marketing Solutions
-                </p>
-              </div>
-            </div>
           </div>
-        </a>
-      </div>
-    </div>
-    {/* End Right Content */}
-  </div>
-  {/* End Item */}
-
-  {/* Item */}
-  <div className="group relative flex gap-x-5">
-    {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-8 flex justify-center items-center">
-        <img src="/images/codingchaska.png" alt="Coding Chaska" />
-      </div>
-    </div>
-    {/* End Icon */}
-    {/* Right Content */}
-    <div className="grow pb-8 group-last:pb-0">
-      <h3 className="mb-1 text-xs opacity-80">
-        May 2022 - Present
-      </h3>
-      <p className="font-semibold text-sm">
-        Founder, Coding Chaska
-      </p>
-      <p className="mt-1 text-sm opacity-75">
-        Managing an IT education platform focused on teaching tech skills to students and professionals, overseeing curriculum development, and mentoring students.
-      </p>
-
-      <ul className="list-disc ms-6 mt-3 space-y-1.5">
-                  <li className="ps-1 text-sm opacity-75">
-                    Designed and launched comprehensive courses in web development, data science, and Python programming.
-                  </li>
-                  <li className="ps-1 text-sm opacity-75">
-                    Established partnerships with educational institutions to expand the reach of Coding Chaska’s curriculum.
-                  </li>
-                  <li className="ps-1 text-sm opacity-75">
-                    Mentored students, many of whom have gone on to secure internships and full-time positions in tech companies.
-                  </li>
-                </ul>
-                
-      <div className="mt-4">
-        <a
-          className="block border rounded-lg hover:shadow-sm focus:outline-none"
-          href="https://www.codingchaska.com/"
-          target="_blank"
-        >
-          <div className="relative flex items-center overflow-hidden">
-            <img
-              className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-              src="https://www.codingchaska.com/images/home/hero_new.avif"
-              alt="Coding Chaska Website"
-            />
-            <div className="grow p-4 ms-32 sm:ms-48">
-              <div className="min-h-24 flex flex-col justify-center">
-                <h3 className="font-semibold text-sm text-primary">
-                  Coding Chaska
-                </h3>
-                <p className="mt-1 text-sm opacity-75">
-                  Start your Coding journey with Coding Chaska. Job ready programs, live courses, and self-paced courses
-                </p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    {/* End Right Content */}
-  </div>
-  {/* End Item */}
-
-  {/* Item */}
-  <div className="group relative flex gap-x-5">
-    {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-8 flex justify-center items-center">
-        <img src="/logo.png" alt="Freelance IT Trainer" />
-      </div>
-    </div>
-    {/* End Icon */}
-    {/* Right Content */}
-    <div className="grow pb-8 group-last:pb-0">
-      <h3 className="mb-1 text-xs opacity-80">
-        Oct 2017 - May 2022
-      </h3>
-      <p className="font-semibold text-sm">
-        Freelance IT Trainer
-      </p>
-      <p className="mt-1 text-sm opacity-75">
-      For over four years, I pursued freelance work, focusing on both IT education and hands-on development projects. I provided IT training, specializing in Python, web development, and data science, to students and professionals alike. Simultaneously, I worked on various web development projects, delivering quality solutions to clients across different industries.
-      </p>
-    </div>
-    {/* End Right Content */}
-  </div>
-  {/* End Item */}
-
-  {/* Item */}
-  <div className="group relative flex gap-x-5">
-    {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-4 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-8 bg-base-300 flex justify-center items-center">
-        <img src="/images/mazkara.jpg" alt="Mazkara Internet" />
-      </div>
-    </div>
-    {/* End Icon */}
-    {/* Right Content */}
-    <div className="grow pb-8 group-last:pb-0">
-      <h3 className="mb-1 text-xs opacity-80">
-        Mar 2017 - Jun 2017
-      </h3>
-      <p className="font-semibold text-sm">
-        Backend Developer, Mazkara Internet
-      </p>
-      <p className="mt-1 text-sm opacity-75">
-
-      At Mazkara Internet, I worked as a backend developer, ensuring the smooth operation of the company's systems by building and optimizing backend functionalities. I played a key role in maintaining the server-side logic, integrating third-party services, and ensuring the reliability of the data flow.
-
-      </p>
-    </div>
-    {/* End Right Content */}
-  </div>
-  {/* End Item */}
-
-  {/* Item */}
-  <div className="group relative flex gap-x-5">
-    {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-8 flex justify-center items-center">
-        <img src="/images/tourepedia.jpg" alt="Tourepedia" />
-      </div>
-    </div>
-    {/* End Icon */}
-    {/* Right Content */}
-    <div className="grow pb-8 group-last:pb-0">
-      <h3 className="mb-1 text-xs opacity-80">
-        Apr 2016 - Feb 2017
-      </h3>
-      <p className="font-semibold text-sm">
-        Co-Founder, Tourepedia
-      </p>
-      <p className="mt-1 text-sm opacity-75">
-      As a co-founder of Tourepedia, I was deeply involved in the conceptualization and development of the company's web platform. My focus was on building a seamless user experience that allowed travelers to easily plan and book their tours. Collaborating closely with the team, I led the website development efforts, which helped grow the platform's user base during the initial stages of the startup.
-      </p>
-    </div>
-    {/* End Right Content */}
-  </div>
-  {/* End Item */}
-
-  {/* Item */}
-  <div className="group relative flex gap-x-5">
-    {/* Icon */}
-    <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-      <div className="relative z-10 size-8 flex justify-center items-center">
-        <img src="/images/iitkanpur.jpg" alt="IIT Kanpur" />
-      </div>
-    </div>
-    {/* End Icon */}
-    {/* Right Content */}
-    <div className="grow pb-8 group-last:pb-0">
-      <h3 className="mb-1 text-xs opacity-80">
-        2012 - 2016
-      </h3>
-      <p className="font-semibold text-sm">
-        BS Physics,
-        IIT Kanpur </p> <p className="mt-1 text-sm opacity-75"> Gained in-depth knowledge of physics, computational techniques, and problem-solving skills. </p> </div> {/* End Right Content */}
-
-    </div> {/* End Item */} 
-    
-    </div>
-
-
         </div>
-
-
-
-
-
-
-    </main>
-
+      </main>
     </>
-  )
+  );
 }
