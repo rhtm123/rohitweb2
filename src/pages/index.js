@@ -3,6 +3,143 @@ import Head from "next/head";
 import { FaCode, FaLaptopCode, FaServer, FaDatabase, FaTools, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+import { FaPython, FaJs, FaReact, FaChartBar, FaGraduationCap, FaClock, FaUsers, FaStar } from "react-icons/fa"
+import { SiDjango, SiNextdotjs } from "react-icons/si"
+
+
+const courses = [
+  {
+    id: "python-fundamentals",
+    title: "Python Fundamentals",
+    description: "Master Python programming from basics to advanced concepts",
+    icon: FaPython,
+    duration: "8 weeks",
+    level: "Beginner",
+    students: 150,
+    rating: 4.9,
+    price: "₹9,999",
+    topics: ["Variables & Data Types", "Control Structures", "Functions", "OOP", "File Handling",],
+    color: "bg-yellow-500",
+  },
+  {
+    id: "javascript-mastery",
+    title: "JavaScript Mastery",
+    description: "Complete JavaScript course covering ES6+ and modern development",
+    icon: FaJs,
+    duration: "8 weeks",
+    level: "Intermediate",
+    students: 200,
+    rating: 4.8,
+    price: "₹9,999",
+    topics: ["ES6+ Features", "DOM Manipulation", "Async Programming", "APIs", "Modern JS"],
+    color: "bg-yellow-400",
+  },
+  {
+    id: "react-development",
+    title: "React Development",
+    description: "Build modern web applications with React and its ecosystem",
+    icon: FaReact,
+    duration: "8 weeks",
+    level: "Intermediate",
+    students: 180,
+    rating: 4.9,
+    price: "₹9,999",
+    topics: ["Components", "Hooks", "State Management", "Routing", "Testing"],
+    color: "bg-blue-500",
+  },
+  {
+    id: "django-backend",
+    title: "Django Backend Development",
+    description: "Create powerful web applications with Django framework",
+    icon: SiDjango,
+    duration: "8 weeks",
+    level: "Intermediate",
+    students: 120,
+    rating: 4.7,
+    price: "₹9,999",
+    topics: ["Models & Views", "Templates", "Authentication", "REST APIs", "Deployment"],
+    color: "bg-green-600",
+  },
+  {
+    id: "data-science",
+    title: "Data Science with Python",
+    description: "Analyze data and build machine learning models",
+    icon: FaChartBar,
+    duration: "12 weeks",
+    level: "Advanced",
+    students: 90,
+    rating: 4.8,
+    price: "₹19,999",
+    topics: ["Pandas & NumPy", "Data Visualization", "Machine Learning", "Statistics", "Projects"],
+    color: "bg-purple-600",
+  },
+  {
+    id: "nextjs-fullstack",
+    title: "Next.js Full Stack",
+    description: "Build full-stack applications with Next.js and modern tools",
+    icon: SiNextdotjs,
+    duration: "12 weeks",
+    level: "Advanced",
+    students: 85,
+    rating: 4.9,
+    price: "₹19,999",
+    topics: ["App Router", "Server Components", "API Routes", "Database Integration", "Deployment"],
+    color: "bg-black",
+  },
+]
+
+const projects = [
+  {
+    title: "Coding Chaska",
+    subtitle: "Online Courses",
+    description: "Interactive learning platform offering courses, job-ready programs, and MCQ quizzes.",
+    link: "https://www.codingchaska.com/",
+    github: "https://github.com/rhtm123/cc-frontend-v2",
+    tech: ["NextJs", "Tailwind", "DaisyUI", "Django", "PostgreSQL"],
+  },
+  {
+    title: "Naigaon Market",
+    subtitle: "Hyperlocal Online Store",
+    description: "Redefining e-commerce for local communities with fair pricing and fast delivery.",
+    link: "https://www.naigaonmarket.com/",
+    github: "https://github.com/rhtm123/ecommerce-frontend",
+    tech: ["Sveltekit", "Tailwind", "DaisyUI", "Django", "Postgres", "Django Ninja", "Twilio"],
+  },
+  {
+    title: "Coding Chaska Lab",
+    subtitle: "Online Editor",
+    description: "Lightweight editor for HTML, CSS, and Python coding practice.",
+    link: "https://www.codingchaskalab.com/",
+    github: "https://github.com/rhtm123/cc-lab",
+    tech: ["Svelte", "Tailwind", "Django", "PostgreSQL"],
+  },
+  {
+    title: "CraftMySite(CMS)",
+    subtitle: "Website Builder",
+    description: "Tailwind-based website builder with pre-built sections and live preview.",
+    link: "https://cms.growtechlab.com/",
+    github: "https://github.com/rhtm123/gt-website-builder",
+    tech: ["NextJs", "Django Ninja", "PostgreSQL", "Tailwind"],
+  },
+  {
+    title: "Milk Ease",
+    subtitle: "Blockchain Based Milk Supplychain",
+    description: "Streamlines dairy supply with traceability and secure data management.",
+    link: "https://milk-supplychain.vercel.app/",
+    github: "https://github.com/rhtm123/milk-supplychain",
+    tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
+  },
+  {
+    title: "Society Sathi",
+    subtitle: "Society Management App",
+    description: "Manages society operations with penalty systems, NOC, and alerts.",
+    link: "https://www.societysathi.com/",
+    github: "https://github.com/rhtm123/ff-frontend",
+    tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
+  },
+];
+
+
 export default function Home() {
   const fadeInUp = {
     initial: { opacity: 0, y: 50 },
@@ -18,56 +155,7 @@ export default function Home() {
     },
   };
 
-  const projects = [
-    {
-      title: "Coding Chaska",
-      subtitle: "Online Courses",
-      description: "Interactive learning platform offering courses, job-ready programs, and MCQ quizzes.",
-      link: "https://www.codingchaska.com/",
-      github: "https://github.com/rhtm123/cc-frontend-v2",
-      tech: ["NextJs", "Tailwind", "DaisyUI", "Django", "PostgreSQL"],
-    },
-    {
-      title: "Naigaon Market",
-      subtitle: "Hyperlocal Online Store",
-      description: "Redefining e-commerce for local communities with fair pricing and fast delivery.",
-      link: "https://www.naigaonmarket.com/",
-      github: "https://github.com/rhtm123/ecommerce-frontend",
-      tech: ["Sveltekit", "Tailwind", "DaisyUI", "Django", "Postgres", "Django Ninja", "Twilio"],
-    },
-    {
-      title: "Coding Chaska Lab",
-      subtitle: "Online Editor",
-      description: "Lightweight editor for HTML, CSS, and Python coding practice.",
-      link: "https://www.codingchaskalab.com/",
-      github: "https://github.com/rhtm123/cc-lab",
-      tech: ["Svelte", "Tailwind", "Django", "PostgreSQL"],
-    },
-    {
-      title: "CraftMySite(CMS)",
-      subtitle: "Website Builder",
-      description: "Tailwind-based website builder with pre-built sections and live preview.",
-      link: "https://cms.growtechlab.com/",
-      github: "https://github.com/rhtm123/gt-website-builder",
-      tech: ["NextJs", "Django Ninja", "PostgreSQL", "Tailwind"],
-    },
-    {
-      title: "Milk Ease",
-      subtitle: "Blockchain Based Milk Supplychain",
-      description: "Streamlines dairy supply with traceability and secure data management.",
-      link: "https://milk-supplychain.vercel.app/",
-      github: "https://github.com/rhtm123/milk-supplychain",
-      tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
-    },
-    {
-      title: "Society Sathi",
-      subtitle: "Society Management App",
-      description: "Manages society operations with penalty systems, NOC, and alerts.",
-      link: "https://www.societysathi.com/",
-      github: "https://github.com/rhtm123/ff-frontend",
-      tech: ["NextJs", "Express", "MongoDB", "Tailwind"],
-    },
-  ];
+
 
   return (
     <>
@@ -106,6 +194,85 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+
+        {/* courses section */}
+
+        <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Choose Your Learning Path</h2>
+          <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
+            From beginner-friendly Python to advanced data science, find the perfect course to advance your career
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {courses.map((course) => {
+            const IconComponent = course.icon
+            return (
+              <div
+                key={course.id}
+                className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="card-body">
+                  <div className={`w-16 h-16 ${course.color} rounded-lg flex items-center justify-center mb-4`}>
+                    <IconComponent className="text-2xl text-white" />
+                  </div>
+
+                  <h3 className="card-title text-xl mb-2">{course.title}</h3>
+                  <p className="text-base-content/70 mb-4">{course.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {course.topics.slice(0, 3).map((topic, index) => (
+                      <span key={index} className="badge badge-outline badge-sm">
+                        {topic}
+                      </span>
+                    ))}
+                    {course.topics.length > 3 && (
+                      <span className="badge badge-outline badge-sm">+{course.topics.length - 3} more</span>
+                    )}
+                  </div>
+
+                  <div className="flex justify-between items-center mb-4 text-sm">
+                    <div className="flex items-center gap-1">
+                      <FaClock className="text-primary" />
+                      <span>{course.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FaUsers className="text-primary" />
+                      <span>{course.students} students</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FaStar className="text-yellow-500" />
+                      <span>{course.rating}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className="text-2xl font-bold text-primary">{course.price}</span>
+                      <div
+                        className={`badge badge-sm ${
+                          course.level === "Beginner"
+                            ? "badge-success"
+                            : course.level === "Intermediate"
+                              ? "badge-warning"
+                              : "badge-error"
+                        }`}
+                      >
+                        {course.level}
+                      </div>
+                    </div>
+                    <Link href={`/courses/${course.id}`} className="btn btn-primary">
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+        
 
         {/* Projects Section */}
         <div className="bg-base-200 py-16">
